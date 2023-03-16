@@ -5,21 +5,21 @@
 
 try
 {
-Console.WriteLine("Введите координаты точки А в трехмерном пространстве (x, y, z)");
-Console.Write("x = ");
-double x1 = Convert.ToSingle(Console.ReadLine());
-Console.Write("y = ");
-double y1 = Convert.ToSingle(Console.ReadLine());
-Console.Write("z = ");
-double z1 = Convert.ToSingle(Console.ReadLine());
-Console.WriteLine("Введите координаты точки B в трехмерном пространстве (x, y, z)");
-Console.Write("x = ");
-double x2 = Convert.ToSingle(Console.ReadLine());
-Console.Write("y = ");
-double y2 = Convert.ToSingle(Console.ReadLine());
-Console.Write("z = ");
-double z2 = Convert.ToSingle(Console.ReadLine());
-Console.WriteLine("Растояние между точками равно " + Distance(x1,x2,y1,y2,z1,z2));
+    Console.WriteLine("Введите координаты точки А в трехмерном пространстве (x, y, z)");
+    Console.Write("x = ");
+    int x1 = System.Convert.ToInt32(Console.ReadLine());
+    Console.Write("y = ");
+    int y1 = System.Convert.ToInt32(Console.ReadLine());
+    Console.Write("z = ");
+    int z1 = System.Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите координаты точки B в трехмерном пространстве (x, y, z)");
+    Console.Write("x = ");
+    int x2 = System.Convert.ToInt32(Console.ReadLine());
+    Console.Write("y = ");
+    int y2 = System.Convert.ToInt32(Console.ReadLine());
+    Console.Write("z = ");
+    int z2 = System.Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Растояние между точками равно " + Distance(x1, y1, z1, x2, y2, z2));
 }
 catch
 {
@@ -27,11 +27,11 @@ catch
 }
 
 
-double Distance(double x1, double y1, double z1, double x2, double y2, double z2)
+double Distance(int x1, int y1, int z1, int x2, int y2, int z2)
 {
-    double result1 = (x2 - x1)*(x2 -x1);
-    double result2 = (y2 - y1)*(y2 -y1);
-    double result3 = (z2 - z1)*(z2 -z1);
-    double result = Math.Sqrt(result1+result2+result3);
+    double result1 = Math.Pow(x2 - x1, 2);
+    double result2 = Math.Pow(y2 - y1, 2);
+    double result3 = Math.Pow(z2 - z1, 2);
+    double result = Math.Sqrt(result1 + result2 + result3);
     return result;
 }
