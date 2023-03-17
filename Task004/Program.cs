@@ -2,12 +2,18 @@
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в N-мерном пространстве. 
 // Сначала задается N с клавиатуры, потом задаются координаты точек.
 
+try
+{
 Console.WriteLine("Введите число, обозначающее количество измерений пространстваж: ");
 int num = Convert.ToInt32(Console.ReadLine());
 double[] a = new double[num];
 double[] b = new double[num];
 DistancePoint(a, b);
-
+}
+catch
+{
+    Console.WriteLine("Введено некорректное значение");
+}
 
 
 void DistancePoint(double[]a, double[]b)
